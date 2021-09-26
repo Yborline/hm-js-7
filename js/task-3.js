@@ -23,29 +23,19 @@ const ListEl = document.querySelector('#gallery');
 
 
 const elements = images.map(({url, alt}) => {
-    return `<li><img src="${url} alt="${alt}</li>`
-    // const imgEl = document.createElement('img');
-    
-    // imgEl.url = el.url;
-    // imgEl.alt = el.alt;
+    return `<li><img src="${url}" alt="${alt}"></li>`
 
-  
-  
-  
-
-// const liEl = document.createElement('li');
-//   liEl.insertAdjacentElement(`afterbegin`, imgEl);
-//     return liEl;
 
 })
 
-  liEl.insertAdjacentElement(`afterbegin`, elements.join(''))
-ListEl.append(...elements);
+
+ListEl.insertAdjacentText('afterbegin', elements.join(``));
 
 
 
 
-console.log(ListEl);
+
+
 
 
 
