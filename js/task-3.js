@@ -21,4 +21,4 @@ const elements = images.map(({url, alt}) => {
 
 })
 
-ListEl.insertAdjacentText('afterbegin', elements.join(``));
+ListEl.insertAdjacentHTML('afterbegin', elements.join(``));
