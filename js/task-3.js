@@ -22,24 +22,24 @@ const ListEl = document.querySelector('#gallery');
 
 
 
-const elements = images.map((el) => {
+const elements = images.map(({url, alt}) => {
+    return `<li><img src="${url} alt="${alt}</li>`
+    // const imgEl = document.createElement('img');
     
-    const imgEl = document.createElement('img');
-    
-    imgEl.url = el.url;
-    imgEl.alt = el.alt;
+    // imgEl.url = el.url;
+    // imgEl.alt = el.alt;
 
   
   
   
 
-const liEl = document.createElement('li');
-  liEl.insertAdjacentElement(`afterbegin`, imgEl);
-    return liEl;
+// const liEl = document.createElement('li');
+//   liEl.insertAdjacentElement(`afterbegin`, imgEl);
+//     return liEl;
 
 })
 
-
+  liEl.insertAdjacentElement(`afterbegin`, elements.join(''))
 ListEl.append(...elements);
 
 
