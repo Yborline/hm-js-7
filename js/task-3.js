@@ -14,30 +14,11 @@ const images = [
 ];
 
 const ListEl = document.querySelector('#gallery');
-// console.log(ListEl);
-
-
-
-
-
 
 
 const elements = images.map(({url, alt}) => {
     return `<li><img src="${url}" alt="${alt}"></li>`
 
-
 })
 
-
 ListEl.insertAdjacentText('afterbegin', elements.join(``));
-
-
-
-
-
-
-
-
-
-
-
